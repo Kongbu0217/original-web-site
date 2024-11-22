@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>お問い合わせありがとうございます</title>
+    <link rel="stylesheet" href="./assets/css/thanks.css">
 </head>
 <body>
-    <h1>送信完了</h1>
-    <a href="http://127.0.0.1:5500/index.html">吹奏楽部公式HPに戻る</a>
+    <img src="./assets/img/仮あり.png" alt="">
+    <div class="on-text">
+        <h1>送信完了</h1>
+        <p>この度はお問い合わせいただきまして誠にありがとうございます。</p>
+        <p>内容を確認次第、担当者より折返しご連絡させていただきます。今しばらくお待ちくださいませ。</p>
+        <p>画面は10秒後に自動的に切り替わります。</p>
+        <a href="http://127.0.0.1:5500/index.html">吹奏楽部公式HPに戻る</a>
+    </div>
+    <script>
+        setTimeout('history.go(-1)',10000);
+        console.log(this)
+    </script>
 </body>
 </html>

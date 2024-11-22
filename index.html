@@ -5,29 +5,46 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta  name=”viewport” content=”width=device-width,initial-scale=1.0″>
     <title>成進高等学校 吹奏楽部</title>
+    <meta name="description" content="成進高等学校吹奏楽部公式サイトです。みんな楽しく仲良く活動しています！ご依頼・お問い合わせもお気軽に。" />
+    <meta name=”keywords” content=”成進高等学校,吹奏楽部,山口県,美祢市” />
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- reset.cssから読み込む -->
 </head>
 <body>
     <header id = "header">
-        <div id="header-left">
-            <a href="https://www.mine-c.ed.jp/">
-                <img class="t1" src="./assets/img/top.png" alt="成進高等学校バナー">
+            <a href="http://127.0.0.1:5500/index.html">
+                <img class="t1" src="./assets/img/top.png" alt="成進高等学校">
             </a>
-        </div>
         <div id = "menuH">
-            <button type="hamburger-button" class="hamburger-menu">
+            <button type="hamburger-button" id="js-hamburger-menu" class="hamburger-menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
                 <span class="btn-line"></span>
             </button>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__list-item"><a href="#hero" class="navigation__link">ホーム</a></li>
+                    <li class="navigation__list-item"><a href="#about" class="navigation__link">私たちについて</a></li>
+                    <li class="navigation__list-item"><a href="#real" class="navigation__link">活動実績</a></li>
+                    <li class="navigation__list-item"><a href="#sns" class="navigation__link">各種SNS</a></li>
+                    <li class="navigation__list-item"><a href="#nakama" class="navigation__link">部員募集</a></li>
+                    <li class="navigation__list-item"><a href="#qqq" class="navigation__link">お問い合わせ</a></li>
+                </ul>
+            </nav>
         </div>
         
     </header>
-        <main id="hero">
+    <main>
+        <section id="hero">
             <div class="hero1">
                 <img src="./assets/img/hero.jpg" alt="hero">
             </div>
-            <div>
+            <div id="needhide">
                 <ul class="menu">
                     <li class="menubtn"><a href="#hero">ホーム</a></li>
                     <li class="menubtn"><a href="#about">私たちについて</a></li>
@@ -37,17 +54,16 @@
                     <li class="menubtn"><a href="#qqq">お問い合わせ</a></li>
                 </ul>
             </div>
-        </main>
+        </section>
         <!-- section#section-00*5 -->
         <section id="about">
             <h2>私たちについて</h2>
             <div class="aboutbox">
-                <div class="daily">
-                    <img class="maru1" src="./assets/img/we1.JPEG" alt="まる1">
-                    <img class="maru2" src="./assets/img/we2.JPEG" alt="まる2">
-                </div>
-
-                <div class="story">
+                <span class="daily">
+                    <img class="maru1" src="./assets/img/we1.JPEG" alt="成進高校第一回定期演奏会集合写真">
+                    <img class="maru2" src="./assets/img/we2.JPEG" alt="成進高校吹奏楽部筋トレ">
+                </span>
+                <span class="story">
                     <h3>成進高校吹奏楽部</h3>
                     <p>私たちは2014年に、部員2名と顧問2名で吹奏楽同好会を設立し、</p>
                     <p>以来、日々成長を続けてきました。</p>
@@ -55,27 +71,25 @@
                     <p>各種イベントやコンクール、講習会などに積極的に参加し、
                     </p>
                     <p>さらなる成長を目指して前進し続けています。</p>
-                </div>
+                </span>
             </div>
         </section>
         <section id="real">
             <h2>活動実績</h2>
-
             <div class="hako1">
-                <div class="real1">
-                    <img src="assets/img/コンクール.JPEG" alt="コンクール">
-                </div>
-                <div class="ex1">
+                <span class="real1">
+                    <img src="assets/img/コンクール.JPEG" alt="吹奏楽部コンクール前の体操">
+                </span>
+                <span class="ex1">
                     <h3>コンクール前の様子</h3>
                     <p>コンクールの朝の緊張感...</p>
                     <p>いろんな感情を音にして表現する楽しさは言葉では表せません...</p>
                     <p>数字や評価だけが全てではありませんが、</p>
                     <p>審査員の方々からの評価は年々向上しています。</p>
-                </div>
+                </span>
             </div>
-
             <div class="hako2">
-                <div class="ex2">
+                <span class="ex2">
                     <h3>私たちの音楽を地域の皆様へ</h3>
                     <p>美祢市内の各種イベントやお祭り、老人ホームや幼稚園...</p>
                     <p>私たちは地域の方々との交流を大切にし、</p>
@@ -84,17 +98,16 @@
                     <p>皆さまに楽しい音楽をお届けできるよう努めています。</p>
                     <p>大編成の部活動ではありませんが、</p>
                     <p>私たちはパワフルに活動しています。</p>
-                </div>
-                <div class="real2">
-                    <img src="./assets/img/おまつり.JPEG" alt="美祢市お祭り">
-                </div>
+                </span>
+                <span class="real2">
+                    <img src="./assets/img/おまつり.JPEG" alt="美祢市クリスマスコンサート">
+                </span>
             </div>
-
             <div class="hako3">
-                <div class="real3">
-                    <img src="./assets/img/定期演奏会.JPEG" alt="成進高校吹奏楽部定期演奏会">
-                </div>
-                <div class="ex3">
+                <span class="real3">
+                    <img src="./assets/img/定期演奏会.JPEG" alt="成進高校吹奏楽部定期演奏会歴代卒業生との演奏">
+                </span>
+                <span class="ex3">
                     <h3>愛し愛され定期演奏会</h3>
                     <p>厚狭川の桜の蕾が膨らみ始める頃、</p>
                     <p>私たちは定期演奏会を開催します。</p>
@@ -107,82 +120,92 @@
                     <p>ぜひ感じていただければと思います。</p>
                     <p>この青春のひとときについては、</p>
                     <p>改めて日程をご案内させていただきます。</p>
-                </div>
+                </span>
             </div>
-
         </section>
         <section id="sns">
             <h2>各種SNSのご紹介</h2>
-
-            <div class="snsimg">
+            <span class="snsimg">
                 <ul class="SNSIMG">
-                    <li><img src="./assets/img/1st.JPEG" alt=""></li>
-                    <li><img src="./assets/img/2nd.JPEG" alt=""></li>
-                    <li><img src="./assets/img/3rd.JPEG" alt=""></li>
-                    <li><img src="./assets/img/4th.JPEG" alt=""></li>
+                    <li><img src="./assets/img/1st.JPEG" alt="フルートを吹く成進高校の生徒"></li>
+                    <li><img src="./assets/img/2nd.JPEG" alt="コンクール8日前のカウントダウン写真"></li>
+                    <li><img src="./assets/img/3rd.JPEG" alt="外での練習風景"></li>
+                    <li><img src="./assets/img/4th.JPEG" alt="卒業生来校"></li>
                 </ul>
-            </div>
+            </span>
+            <!-- スライダー -->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><li class="carousel-item"><img class="carousel-img" src="./assets/img/slideimag/スライドresized/1s_Resize Image.png" alt="成進高校第一回定期演奏会集合写真"></li></div>
+                    <div class="swiper-slide"><li class="carousel-item"><img class="carousel-img" src="./assets/img/slideimag/スライドresized/2s_Resize Image.png" alt="外での練習風景"></li></div>
+                    <div class="swiper-slide"><li class="carousel-item"><img class="carousel-img" src="./assets/img/slideimag/スライドresized/3s_Resize Image.png" alt="コンクール7日前のカウントダウン"></li></div>
+                    <div class="swiper-slide"><li class="carousel-item"><img class="carousel-img" src="./assets/img/slideimag/スライドresized/4s_Resize Image.png" alt="オープンキャンパスの外での演奏"></li></div>
+                    <div class="swiper-slide"><li class="carousel-item"><img class="carousel-img" src="./assets/img/slideimag/スライドresized/5s_Resize Image.png" alt="卒業生来校"></li></div>
+                    <div class="swiper-slide"><li class="carousel-item"><img class="carousel-img" src="./assets/img/slideimag/スライドresized/6s_Resize Image.png" alt="コンクール8日前のカウントダウン写真"></li></div>
+                    <div class="swiper-slide"><li class="carousel-item"><img class="carousel-img" src="./assets/img/slideimag/スライドresized/7s_Resize Image.png" alt="フルートを吹く成進高校の生徒"></li></div>
+                    <div class="swiper-slide"><li class="carousel-item"><img class="carousel-img" src="./assets/img/slideimag/スライドresized/8s_Resize Image.png" alt="練習前のストレッチ"></li></div>
+                    <div class="swiper-slide"><li class="carousel-item"><img class="carousel-img" src="./assets/img/slideimag/スライドresized/9s_Resize Image.png" alt="毎年恒例吹奏楽部お花見"></li></div>
+                </div>
+                <!-- pagination -->
+                <div class="swiper-pagination"></div>
+    
+                <!--navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
+            </div>
+            
             <div>
                 <ul class="SNSBTN">
-                    <li><a href="https://www.instagram.com/seishin_brass/"><img class="SNSBTN2" src="./assets/img/icon_inst.png" alt=""></a></li>
-                    <li><a href="https://www.facebook.com/seishin.brassband/"><img class="SNSBTN2" src="./assets/img/icon_f.png" alt=""></a></li>
-                    <li><a href="https://x.com/seishin_brass"><img class="SNSBTN2" src="./assets/img/icon_x.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/seishin_brass/"><img class="SNSBTN2" src="./assets/img/icon_inst.png" alt="成進高校吹奏楽部Instagram"></a></li>
+                    <li><a href="https://www.facebook.com/seishin.brassband/"><img class="SNSBTN2" src="./assets/img/icon_f.png" alt="成進高校吹奏楽部facebook"></a></li>
+                    <li><a href="https://x.com/seishin_brass"><img class="SNSBTN2" src="./assets/img/icon_x.png" alt="成進高校吹奏楽部X,Twitter"></a></li>
                 </ul>
             </div>
         </section>
         <section id="nakama">
             <h2>部員募集中</h2>
-
             <div class="nakamabox">
-
-                <div class="want">
+                <span class="want">
                     <h3>私たちは、常に新しい仲間を募集中</h3>
                     <p>未経験の方も楽しみながら演奏できますので、</p>
                     <p>ご安心ください。</p>
                     <p>楽譜が読めなくても問題ありません。</p>
                     <p>実際、部員のほとんどは未経験からスタートしています。</p>
                     <p>ぜひ一度、楽器に触れてみませんか？</p>
-                </div>
-
-                <div class="wants">
-                    <img class="maru4" src="./assets/img/募集1.jpg" alt="まる3">
-                    <img class="maru3" src="./assets/img/募集2.JPEG" alt="まる4">
-                </div>
-
+                </span>
+                <span class="wants">
+                    <img class="maru4" src="./assets/img/募集1.jpg" alt="みんな仲良しの部員">
+                    <img class="maru3" src="./assets/img/募集2.JPEG" alt="仲良くアイスも食べちゃう4ボーイズ">
+                </span>
             </div> 
         </section>
         <section id="qqq">
             <h2>お問い合わせ</h2>
-
-            <div class="question">
+            <span class="question">
                 <h3>ご気軽にお問い合わせください。</h3>
                 <p>名前はニックネームでも構いません。</p>
                 <p>Instagramのストーリー等で回答をご希望の場合には連絡先にSNSとご記入ください。</p>
-            </div>
+            </span>
         </section>
         <!-- 問い合わせフォーム -->
         <section id = "Form">
             <div class="contact-form">
                 <form action="https://api.staticforms.xyz/submit" method="post" >
-
                     <input type="hidden" name="accessKey" value="29e8372d-1bbb-4ef1-aff1-25e4e618b1d9">
-
                     <div class="item">
                         <label class="label">お名前</label>
                         <input type="text" class="inputs" name="name" placeholder="例)トロンボーンの卒業生" required />
                     </div>
-
                     <div class="item">
                         <label class="label">連絡先</label>
                         <input type="text" class="inputs" name="email" placeholder="例)メールアドレス、電話番号等" required />
                     </div>
-
                     <div class="item">
                         <label class="label">お問い合わせ内容</label>
-                        <textarea name="message" class="inputs" placeholder="意見・ご感想等もこちらにご記入ください" required ></textarea>
+                        <textarea name="message" class="inputs" placeholder="ご意見・ご感想等もこちらにご記入ください" required ></textarea>
                     </div>
-
                     <div class="button-area">
                         <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/tanks.html">
                         <input type="submit" value="送信する">
@@ -193,23 +216,24 @@
         <footer id="footer">
         <div class="saigo">
             <div class="lelast">
-                <img src="./assets/img/last.png" alt="">
+                <a href="https://www.mine-c.ed.jp/"><img src="./assets/img/last.png" alt="成進高校">
+                </a>
             </div>
 
             <div class="rilast">
                 <ul>
                     <li>〒759-2212  山口県美祢市大嶺町東分3294番地</li>
-                    <li><img src="./assets/img/電話の受話器のアイコン素材.png" alt="">0837-52-1350</li>
-                    <li><img src="./assets/img/FAXのフリーアイコン5.png" alt="">0837-53-1347</li>
-                    <li><img src="./assets/img/メールの無料アイコンその5.png" alt="">info@mine-c.ed.jp</li>
+                    <li><img src="./assets/img/電話の受話器のアイコン素材.png" alt="成進高校電話番号">0837-52-1350</li>
+                    <li><img src="./assets/img/FAXのフリーアイコン5.png" alt="成進高校ファックス">0837-53-1347</li>
+                    <li><img src="./assets/img/メールの無料アイコンその5.png" alt="成進高校メールアドレス">info@mine-c.ed.jp</li>
                 </ul>
             </div>
 
             <div class="saigoicon">
                 <ul>
-                    <li><a href="https://www.instagram.com/seishin_brass/"><img class="Lastsns" src="./assets/img/icon_inst.png" alt=""></a></li>
-                    <li><a href="https://www.facebook.com/seishin.brassband/"><img class="Lastsns" src="./assets/img/icon_f.png" alt=""></a></li>
-                    <li><a href="https://x.com/seishin_brass"><img class="Lastsns" src="./assets/img/icon_x.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/seishin_brass/"><img class="Lastsns" src="./assets/img/icon_inst.png" alt="成進高校インスタグラム"></a></li>
+                    <li><a href="https://www.facebook.com/seishin.brassband/"><img class="Lastsns" src="./assets/img/icon_f.png" alt="成進高校フェイスブック"></a></li>
+                    <li><a href="https://x.com/seishin_brass"><img class="Lastsns" src="./assets/img/icon_x.png" alt="成進高校エックス、ツイッター"></a></li>
                 </ul>
             </div>
 
@@ -218,8 +242,10 @@
             <p>Copyright ©2024 Seishin High School. All Rights Reserved.</p>
         </div>
         </footer>
+    </main>
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="./assets/js/script.js"></script>
         
 </body>

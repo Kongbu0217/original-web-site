@@ -1,0 +1,19 @@
+a {
+    color: rgb(88, 88, 252);
+}
+body {
+    position: relative;
+}
+
+img {
+    width: 100vw;
+    filter: blur(2px);
+}
+
+.on-text {
+    font-weight: 600;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: tomato;
+}

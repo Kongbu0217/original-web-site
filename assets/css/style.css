@@ -1,26 +1,4 @@
-/* cssの中に
-layout
-header.css
-footer.cssなどと分けると良い,または下記のように */
-
-/* color
-#F38173(orange
-#fff(white
-rgb(250, 181, 19) yellow
-*/
-
-/* メディアクエリ
-@media screen and (max-width:480px) {}
-@media screen and (min-width:768px) and (max-width:1024px) {}
-@media screen and (min-width:1024px) {}
-
-今回確実にやること(ipad系はあとで）
-
-@media screen and (max-width:768px){}
-
-  background-color:rgb(205, 205, 205);
- */
-
+/* ヘッダーnavタグ */
 
 /*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 |layout
@@ -38,7 +16,6 @@ h2 {
     text-align: center;
     padding: 50px;
     margin: 50px;
-    /* 迷い中↓ */
     border: none;
     border-top: 5px dotted rgb(250, 181, 19);
     border-bottom: 5px dotted rgb(250, 181, 19);
@@ -72,9 +49,6 @@ p {
   h3 {
     font-size: 15px;
   }
-
-
-
 }
 
 /*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -82,63 +56,143 @@ header
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
 #header {
-    width: 100%;
-    height: 50px;
+    width: 50vh;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#header-left{
-  border: red 1px solid;
-  width: 40%;
-  height: auto;
-}
-
-#menuH{
-  border: blue 1px solid;
-  width: 10%;
-}
-
-
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
   #header {
-    width: 100%;
+    width: 65vh;
+    /* position: fixed;
+    top: 0px; /*自分が固定したい位置*/
+    /* right: 0px; */
   }
 }
+
+
 
 /* ーーーーーーーーーーーーーーーーーーーーーーーーー
 ハンバーガーメニュー
 ーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+/* ・メニュー固定・zーindexの設定・デザイン */
 
 #menuH{
   display: none;
 }
 
 
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
   #menuH{
+    width: 10%;
     display: block;
   }
 
-  #header-left{
-    width: 70%;
+  #menuH{
+    width: 65vh;
+    text-align: right;
   }
 
-  #menuH{
-    width: 15%;
+  .hamburger-menu {
+    width: 45px;
+    height: 45px;
+    z-index: 10;
+  }
+
+  #header {
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
   }
   
   .hamburger-menu {
-    background-color: red;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: none;
+    background: transparent;
+    appearance: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .btn-line {
+    margin-top: 10px;
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background: #242424;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s;
+  }
+  .btn-line:first-child {
+    top: 16px;
+  }
+  .btn-line:nth-child(2) {
+    top: 24px;
+  }
+  .btn-line:last-child {
+    top: 32px;
+  }
+  .hamburger-menu--open .btn-line {
+    top: 50%;
+  }
+  .hamburger-menu--open .btn-line:first-child {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .hamburger-menu--open .btn-line:last-child {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  }
+  .hamburger-menu--open .btn-line:nth-child(2) {
+    display: none;
+  }
+  
+
+  .navigation {
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  .navigation__list {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .navigation__list-item {
+    border-bottom: solid 1px rgb(255, 197, 246);
+  }
+  .navigation__list-item:first-child {
+    border-top: solid 1px  rgb(255, 197, 246);
+  }
+  
+  .navigation__link {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    padding: 24px 0;
+    margin: 10px;
+    transition: .5s;
   }
 }
+  
 
 /*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 |main-hero
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* 表示崩れ・メニューボタン */
 
 #hero {
     display: flex;
@@ -151,18 +205,17 @@ header
     object-fit: cover;
     filter: blur(1px);
     border-radius: 0.5%;
-    margin-top: 20px;
 }
 
 .menubtn {
   width: 100%;
-  max-width: 250px; /* ボタン幅 */
-  border: 2px solid #F38173; 
+  max-width: 200px; /* ボタン幅 */
+  border: 5px solid #F38173; 
   border-radius: 0%;
   color: #F38173;
   background: #fff;
   -webkit-box-shadow: 4px 4px 0 #F38173; /* 影の距離・色 */
-  box-shadow: 4px 4px 0 #F38173; /* 影の距離・色 */
+  box-shadow: 4px 4px 0 #f4f414; /* 影の距離・色 */
   padding: 1em 2em;
   font-weight: bold;
   font-size: 15px;
@@ -178,7 +231,10 @@ header
 
 @media screen and (max-width:768px){
   #hero {
-    margin-top: 0px;
+    margin-top: 20px;
+  }
+  #needhide {
+    display: none;
   }
 }
 
@@ -200,13 +256,14 @@ header
   width: 60%;
   flex-direction: row;
   justify-content: center;
+  align-content: center;
 }
 
 .story {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   width: 40%;
 }
 
@@ -215,7 +272,7 @@ header
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 
 .maru1 {
@@ -271,11 +328,7 @@ header
 .aboutbox {
   position: relative; 
 }
-  
 }
-
-
-
 
 /*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 |real-hako1
@@ -383,6 +436,7 @@ header
 /*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 |real-hako3
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/*　表示崩れ（画面を小さくした時のテキストの高さ） */
 .real3 {
   width: 50%;
   height: auto;
@@ -460,13 +514,41 @@ header
   justify-content: center;
 }
 
+@media screen and (min-width:768px) {
+  .swiper {
+    display: none;
+  }
+}
+
+/* メディアクエリ */
+
 @media screen and (max-width:768px) {
+  .SNSIMG img {
+    display: none;
+  }
+
   .SNSBTN img {
     width: 80px;
     margin: 20px;
   }
-}
 
+  /* スライダー */
+  .swiper-pagination {
+    color:  rgb(255, 197, 246);
+  }
+  .swiper-button-prev {
+    color:  rgb(255, 197, 246);
+  }
+  .swiper-button-next {
+    color:  rgb(255, 197, 246);
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+}
 
 /*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 |部員募集
